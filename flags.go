@@ -18,7 +18,7 @@ func init() {
 	arguments.Register("output", 'o', &OutputDirectory).WithHelp("The output directory")
 	arguments.Register("input", 'i', &InputDirectory).WithHelp("The input directory")
 	arguments.Register("width", 'w', &MaxWidth).WithHelp("The maximum width the thumbnail should fit in")
-	arguments.Register("quality", 'q', &MaxWidth).WithHelp("The quality of the generated the thumbnail")
+	arguments.Register("quality", 'q', &Quality).WithHelp("The quality of the generated the thumbnail")
 
 	arguments.RegisterHelp(true, "Show this help page")
 
