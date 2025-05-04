@@ -4,7 +4,7 @@ import (
 	"image"
 	"os"
 
-	"github.com/chai2010/webp"
+	"github.com/gen2brain/webp"
 )
 
 func exportWebP(img image.Image, file string) error {
@@ -15,8 +15,9 @@ func exportWebP(img image.Image, file string) error {
 
 	defer f.Close()
 
-	return webp.Encode(f, img, &webp.Options{
+	return webp.Encode(f, img, webp.Options{
 		Quality: Quality,
+		Method:  6,
 		Exact:   true,
 	})
 }
